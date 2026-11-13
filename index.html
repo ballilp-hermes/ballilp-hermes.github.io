@@ -3,59 +3,72 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hermes — Private Personal Assistant</title>
-<meta name="description" content="Hermes is a private, single-user automation tool that works inside one Google Account on its owner's explicit instructions.">
+<title>Hermes Personal Assistant</title>
+<meta name="description" content="Hermes Personal Assistant is a private, single-user desktop tool that works inside one Google Account on its owner's explicit instructions: calendar, email, files and documents.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://ballilp-hermes.github.io/">
 <!-- SEOARCHCONSOLE -->
 <style>
-  :root { --ink:#16181b; --muted:#5c6470; --line:#e3e6ea; --bg:#fff; --accent:#2b6cb0; }
+  :root { --ink:#16181b; --muted:#59606b; --line:#e3e6ea; --bg:#fff; --accent:#2b6cb0; --soft:#fafbfc; }
+  * { box-sizing:border-box; }
   body { margin:0; background:var(--bg); color:var(--ink);
-         font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; }
-  main { max-width:720px; margin:0 auto; padding:64px 24px 88px; }
-  h1 { font-size:2rem; line-height:1.2; margin:0 0 10px; letter-spacing:-.015em; }
-  .lede { font-size:1.08rem; color:var(--muted); margin:0 0 34px; }
-  h2 { font-size:1.12rem; margin:34px 0 10px; }
-  ul { padding-left:1.2em; } li { margin:7px 0; }
-  .box { border:1px solid var(--line); border-radius:10px; padding:16px 20px; margin:28px 0;
-         background:#fafbfc; }
+         font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:56px 24px 88px; }
+  h1 { font-size:2.05rem; line-height:1.2; margin:0 0 6px; letter-spacing:-.015em; }
+  .sub { color:var(--muted); font-size:.95rem; margin:0 0 32px; }
+  h2 { font-size:1.15rem; margin:36px 0 10px; letter-spacing:-.005em; }
+  p { margin:0 0 14px; }
+  ul { padding-left:1.25em; margin:0 0 14px; } li { margin:7px 0; }
+  code { background:#f1f3f5; padding:1px 5px; border-radius:4px; font-size:.89em; }
   a { color:var(--accent); }
-  code { background:#f1f3f5; padding:1px 5px; border-radius:4px; font-size:.9em; }
-  footer { margin-top:48px; padding-top:18px; border-top:1px solid var(--line);
-           color:var(--muted); font-size:.87rem; }
+  .box { border:1px solid var(--line); border-radius:10px; padding:16px 20px; margin:26px 0; background:var(--soft); }
+  .purpose { border-left:3px solid var(--accent); padding:2px 0 2px 18px; margin:0 0 24px; }
+  footer { margin-top:52px; padding-top:18px; border-top:1px solid var(--line);
+           color:var(--muted); font-size:.86rem; }
 </style>
 </head>
 <body>
 <main>
-  <h1>Hermes</h1>
-  <p class="lede">A private, single-user assistant that works inside one Google Account, on its owner's instructions.</p>
+  <h1>Hermes Personal Assistant</h1>
+  <p class="sub">Private, single-user desktop automation · operated by the owner of the Google Account that authorises it</p>
 
-  <h2>What it is</h2>
-  <p>Hermes is a desktop automation tool. It runs on its owner's own Mac and carries out tasks the owner asks for directly — adding a meeting to the calendar, triaging an inbox, pulling figures into a spreadsheet, drafting a document.</p>
-  <p>It is not a public product. There is no sign-up, no dashboard and no multi-user service. It is not distributed, and it has exactly one user: the owner of the Google Account that authorises it.</p>
+  <div class="purpose">
+    <p><strong>The purpose of this application</strong> is to carry out everyday administrative tasks for one person inside their own Google Account — adding events to their calendar, organising and drafting their email, and producing documents and spreadsheets from their own files — so those tasks can be done by instruction instead of by hand.</p>
+  </div>
 
-  <h2>What it does with Google user data</h2>
+  <h2>What Hermes Personal Assistant is</h2>
+  <p>Hermes Personal Assistant is a desktop automation tool. It runs locally on its owner's own Mac and performs work the owner asks for directly, in plain language or as a written instruction.</p>
+  <p>It is a private tool, not a public product. There is no sign-up, no user accounts, no dashboard, no subscription and no multi-user service. It is not distributed to the public and is not published in any app store. It has exactly one user: the person who owns the Google Account that authorises it. That person is also the only person whose data the application can reach.</p>
+
+  <h2>What it does</h2>
   <ul>
-    <li><strong>Calendar</strong> (<code>calendar</code>) — lists and creates events on the owner's own calendar, when instructed.</li>
-    <li><strong>Gmail</strong> (<code>gmail.readonly</code>, <code>gmail.modify</code>, <code>gmail.send</code>) — searches, labels, drafts and sends mail only on request. Nothing is sent without the owner approving that specific message.</li>
-    <li><strong>Drive, Sheets, Docs</strong> (<code>drive</code>, <code>spreadsheets</code>, <code>documents</code>) — reads and edits the owner's own files to produce requested documents and reports.</li>
-    <li><strong>Contacts</strong> (<code>contacts.readonly</code>) — read-only, used to resolve a name to an email address.</li>
+    <li><strong>Calendar</strong> — lists the owner's events and creates new events when asked, including titles, times, locations and reminders.</li>
+    <li><strong>Email</strong> — searches and labels the owner's mail, drafts replies, and sends a message only after the owner has approved that specific message.</li>
+    <li><strong>Drive, Sheets and Docs</strong> — locates and reads the owner's own files, and writes new documents, reports and spreadsheet rows from them.</li>
+    <li><strong>Contacts</strong> — resolves a name to an email address. Read-only; contacts are never created, edited or deleted.</li>
   </ul>
-  <p>Access is granted through Google's standard OAuth 2.0 consent screen, scope by scope, and can be revoked by the owner at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+
+  <h2>Why it asks for Google permissions</h2>
+  <p>Each permission maps to one of the tasks above, and nothing more. Access is requested through Google's standard OAuth 2.0 consent screen, scope by scope, and only after the owner reviews and approves the request. The exact scopes are listed, with their purpose, on the <a href="/privacy.html">Privacy Policy</a> page. The owner can withdraw access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, which takes effect immediately.</p>
 
   <div class="box">
-    <strong>What it never does:</strong> no advertising, no profiling, no analytics, no resale of personal data, no credit or lending determinations, and no training of generalised or third-party models on Google user data.
+    <strong>What it never does:</strong> no advertising, no profiling, no analytics or tracking, no sale or resale of personal data, no credit, insurance or lending decisions, no use of Google user data to train generalised or third-party machine-learning models, and no access to any Google Account other than the authorising owner's.
   </div>
 
   <h2>Where the data lives</h2>
-  <p>OAuth tokens and working files stay on the owner's own machine, under owner-only file permissions. There is no remote application server holding Google user data, and nothing is shared with third parties.</p>
+  <p>OAuth tokens and working files stay on the owner's own computer, protected by owner-only file permissions. There is no application server that stores Google user data and no third party that receives it. Requests go directly from that machine to Google's APIs, and only for the task at hand.</p>
+
+  <h2>Compliance</h2>
+  <p>Use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. The application collects no data for advertising and does not transfer Google user data to third parties except where necessary to provide a feature the owner has requested, for security purposes, or to comply with applicable law.</p>
 
   <h2>Privacy</h2>
-  <p>Full detail — data accessed, purpose, storage, retention and how to revoke — is in the <a href="/privacy.html">Privacy Policy</a>, which includes the Google API Services User Data Policy Limited Use disclosure.</p>
+  <p>Full detail — every scope, the purpose, storage location, retention, security measures, and how to revoke access or request deletion — is set out in the <a href="/privacy.html">Privacy Policy</a>.</p>
 
   <h2>Contact</h2>
-  <p>Operated by the account owner. Correspondence: <a href="mailto:sales@link-point.org">sales@link-point.org</a></p>
+  <p>Questions about this application or its data handling: <a href="mailto:sales@link-point.org">sales@link-point.org</a></p>
 
   <footer>
-    <a href="/privacy.html">Privacy Policy</a> · Last updated 13 November 2026
+    <a href="/privacy.html">Privacy Policy</a> · Last updated 13 November 2026 · This page is public and requires no account or login to read.
   </footer>
 </main>
 </body>

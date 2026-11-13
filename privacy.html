@@ -4,84 +4,130 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Hermes Personal Assistant</title>
+<meta name="description" content="How Hermes Personal Assistant accesses, uses, stores and protects Google user data, and how the account owner revokes access or requests deletion.">
 <meta name="robots" content="index,follow">
+<link rel="canonical" href="https://ballilp-hermes.github.io/privacy.html">
 <style>
-  :root { --ink:#1a1c1e; --muted:#5c6470; --line:#e3e6ea; --bg:#fff; }
+  :root { --ink:#16181b; --muted:#59606b; --line:#e3e6ea; --bg:#fff; --accent:#2b6cb0; --soft:#fafbfc; }
+  * { box-sizing:border-box; }
   body { margin:0; background:var(--bg); color:var(--ink);
-         font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; }
-  main { max-width:760px; margin:0 auto; padding:56px 24px 80px; }
-  h1 { font-size:1.9rem; line-height:1.25; margin:0 0 8px; letter-spacing:-.01em; }
-  h2 { font-size:1.15rem; margin:34px 0 10px; }
+         font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; }
+  main { max-width:780px; margin:0 auto; padding:56px 24px 88px; }
+  h1 { font-size:1.95rem; line-height:1.25; margin:0 0 8px; letter-spacing:-.015em; }
+  h2 { font-size:1.13rem; margin:38px 0 10px; letter-spacing:-.005em; }
+  h3 { font-size:1rem; margin:22px 0 6px; }
+  p { margin:0 0 14px; }
+  ul, ol { padding-left:1.25em; margin:0 0 14px; } li { margin:7px 0; }
+  code { background:#f1f3f5; padding:1px 5px; border-radius:4px; font-size:.88em; }
+  a { color:var(--accent); }
   .meta { color:var(--muted); font-size:.9rem; margin:0 0 30px; }
-  ul { padding-left:1.2em; }
-  li { margin:6px 0; }
-  code { background:#f4f6f8; padding:1px 5px; border-radius:4px; font-size:.92em; }
-  .box { border:1px solid var(--line); border-radius:10px; padding:16px 20px; margin:26px 0; }
-  a { color:#0b5cad; }
-  footer { margin-top:44px; padding-top:18px; border-top:1px solid var(--line);
-           color:var(--muted); font-size:.88rem; }
+  .box { border:1px solid var(--line); border-radius:10px; padding:16px 20px; margin:26px 0; background:var(--soft); }
+  table { width:100%; border-collapse:collapse; margin:16px 0 20px; font-size:.93rem; }
+  th, td { text-align:left; padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { font-weight:600; background:var(--soft); }
+  footer { margin-top:52px; padding-top:18px; border-top:1px solid var(--line);
+           color:var(--muted); font-size:.86rem; }
 </style>
 </head>
 <body>
 <main>
   <h1>Privacy Policy — Hermes Personal Assistant</h1>
-  <p class="meta">Last updated: 13 November 2026 · Applies to the private automation tool operated on behalf of the account owner.</p>
+  <p class="meta">Last updated: 13 November 2026 · Effective immediately · Version 2.0</p>
 
-  <p>Hermes (“the application”) is a private, single-user automation tool that acts on the instructions of its operator. It is not a public product, is not distributed to third parties, and has one user: the owner of the Google Account that authorises it. This policy explains what Google user data the application accesses, why, and how it is handled.</p>
+  <p>This policy explains, in full, what data <strong>Hermes Personal Assistant</strong> (“the application”) accesses, why it accesses it, where that data is stored, how long it is kept, who it is shared with, and how the person whose account is connected can withdraw access or have data deleted.</p>
+  <p>There is exactly one such person: the owner of the Google Account that authorises the application. The application has no other users, and it cannot reach any other person's Google Account.</p>
 
-  <h2>1. Who operates the application</h2>
-  <p>Link Point Trading (Hong Kong) Limited, Hong Kong. Contact: <a href="mailto:sales@link-point.org">sales@link-point.org</a>.</p>
+  <h2>1. Who operates the application, and who is responsible</h2>
+  <p>The application is operated by its owner — a private individual based in Hong Kong — strictly for that individual's own personal and administrative use. It is not a commercial service, is not offered to the public, and has no customers.</p>
+  <p>The operator is the data controller for the purposes of this policy, and is also the only data subject. Contact for any privacy question, access request or deletion request: <a href="mailto:sales@link-point.org">sales@link-point.org</a>. This address is monitored by the operator.</p>
 
-  <h2>2. Google user data accessed</h2>
-  <p>Only after the account owner grants consent through Google's OAuth screen, and limited to these scopes:</p>
+  <h2>2. What the application is, and what it is not</h2>
+  <p>It is a desktop automation tool that runs locally on the operator's own computer and performs administrative tasks on request — for example adding a calendar event, sorting an inbox, or producing a document from the operator's own files.</p>
+  <p>It is <strong>not</strong> a public product. There is no sign-up, no user accounts, no dashboard, no subscription, no advertising and no analytics. It is not published in an app store, is not distributed to third parties, and is not operated as a service for anyone else.</p>
+
+  <h2>3. What Google user data is accessed, and exactly why</h2>
+  <p>Data is accessed only after the operator reviews and approves Google's OAuth 2.0 consent screen, and only within the scopes granted there. Each scope and its purpose:</p>
+  <table>
+    <tr><th>Scope</th><th>What it gives access to</th><th>Why the application needs it</th></tr>
+    <tr><td><code>calendar</code></td><td>The operator's own Google Calendar: events, titles, times, locations, descriptions, reminders.</td><td>To list upcoming events and to create, or update, events the operator asks for.</td></tr>
+    <tr><td><code>gmail.readonly</code></td><td>Read access to the operator's own Gmail messages, threads, labels and attachments.</td><td>To search and summarise mail when the operator asks, for example to triage an inbox.</td></tr>
+    <tr><td><code>gmail.modify</code></td><td>The ability to apply or remove labels, mark messages read or unread, and file messages.</td><td>To organise mail on the operator's instruction — labelling, archiving and drafting.</td></tr>
+    <tr><td><code>gmail.send</code></td><td>The ability to send mail from the operator's own address.</td><td>To send a message, only after the operator has reviewed and approved that specific message.</td></tr>
+    <tr><td><code>drive</code></td><td>Files in the operator's own Google Drive.</td><td>To locate, read, upload and organise the operator's own files when asked.</td></tr>
+    <tr><td><code>spreadsheets</code></td><td>The operator's own Google Sheets, cell ranges and values.</td><td>To read figures and write rows when the operator asks for a report or tracker update.</td></tr>
+    <tr><td><code>documents</code></td><td>The operator's own Google Docs.</td><td>To create and edit documents the operator requests.</td></tr>
+    <tr><td><code>contacts.readonly</code></td><td>Read-only access to the operator's Google Contacts: names and email addresses.</td><td>To resolve a name to an email address. Contacts are never created, edited or deleted.</td></tr>
+  </table>
+  <p><strong>Categories of data involved:</strong> calendar event details; email message content, metadata (sender, recipients, subject, date) and attachments; file names and file content in Drive, Sheets and Docs; contact names and addresses. Some of this may include personal data about third parties who correspond with the operator — for example the sender of an email. Such data is processed only as part of the task the operator requested, and is never used for any other purpose.</p>
+  <p><strong>Data the application does not collect:</strong> no passwords, no Google Account credentials, no payment or card data, no location history, no browsing history, no device identifiers, no advertising identifiers, and no data from any Google Account other than the authorising operator's.</p>
+
+  <h2>4. How the data is used</h2>
   <ul>
-    <li><strong>Gmail</strong> (<code>gmail.readonly</code>, <code>gmail.modify</code>, <code>gmail.send</code>) — to read, organise and draft or send mail when instructed.</li>
-    <li><strong>Google Calendar</strong> (<code>calendar</code>) — to read and create calendar events when instructed.</li>
-    <li><strong>Google Drive</strong> (<code>drive</code>) — to locate, read, upload and organise the owner's own files when instructed.</li>
-    <li><strong>Google Sheets</strong> (<code>spreadsheets</code>) — to read and update the owner's own spreadsheets when instructed.</li>
-    <li><strong>Google Docs</strong> (<code>documents</code>) — to create and edit the owner's own documents when instructed.</li>
-    <li><strong>Google Contacts</strong> (<code>contacts.readonly</code>) — to resolve names to addresses when instructed. Read-only; contacts are never modified.</li>
+    <li>Only to carry out the specific task the operator has requested at that moment, and only for as long as it takes to do it.</li>
+    <li>To display the result of that task back to the operator, on the operator's own machine.</li>
+    <li>No advertising, no profiling, no behavioural analysis, no analytics or telemetry, and no marketing of any kind.</li>
+    <li>No determination of creditworthiness, eligibility, insurance risk, employment or any other consequential decision about any person.</li>
+    <li>No use of Google user data to develop, train, improve or fine-tune generalised or third-party artificial-intelligence models.</li>
+    <li>No sale, rental, licensing or other commercial exploitation of data.</li>
   </ul>
-  <p>No other Google data is requested. The application does not request access to Google Drive data belonging to anyone other than the authorising account owner.</p>
 
-  <h2>3. How the data is used</h2>
+  <h2>5. Sharing and disclosure</h2>
+  <p>The application does not sell or share Google user data with third parties. Data leaves the operator's computer in only these circumstances:</p>
   <ul>
-    <li>Only to carry out tasks the owner explicitly requests, at the time of the request.</li>
-    <li>No advertising, no profiling, no analytics, no sale or rental of data.</li>
-    <li>No use to determine creditworthiness or for lending purposes.</li>
-    <li>No use of data to train or improve generalised or third-party machine-learning models.</li>
+    <li><strong>To Google</strong> — requests go directly from the operator's machine to Google's own APIs in order to perform the requested task. This is inherent in using the account.</li>
+    <li><strong>To an AI model provider</strong> — where a requested task requires language-model processing, the specific content needed for that task is sent to the model provider the operator has configured. Only the minimum content needed is sent, and it is not used by the operator to build any profile.</li>
+    <li><strong>Legal requirement</strong> — if disclosure is required by law or by a valid legal process, to the extent strictly required.</li>
+    <li><strong>Security</strong> — where necessary to investigate abuse, fraud or a security incident affecting the operator's own account.</li>
   </ul>
+  <p>No data is transferred to advertisers, data brokers, analytics providers or any other third party for any commercial purpose.</p>
 
-  <h2>4. Storage and transfer</h2>
+  <h2>6. Where the data is stored, and for how long</h2>
   <ul>
-    <li>OAuth access and refresh tokens are stored locally on the owner's own Mac, in a file readable only by the owner's macOS user account.</li>
-    <li>Requested content is processed on that machine. There is no application server that stores Google user data, and no data is transferred to third parties.</li>
-    <li>Data leaves the machine only when a request is sent directly to Google APIs to perform the task, and, where a task requires language-model processing, to the model provider configured by the owner. Prompts are limited to what the task requires.</li>
+    <li><strong>OAuth tokens</strong> (access and refresh) are stored in a single file on the operator's own computer, readable only by the operator's own operating-system user account. They are retained until the operator revokes access, or until they are replaced during re-authorisation. Revoked and superseded tokens are retained only as an inert backup copy on the same machine and grant no access.</li>
+    <li><strong>Working files and outputs</strong> — documents, exports, temporary files and logs produced while doing a task — are stored on that same computer within the operator's own workspace. They are kept while they remain useful for the operator's records and can be deleted at any time.</li>
+    <li><strong>No server-side storage.</strong> There is no application back end, database or cloud store holding Google user data. Nothing is retained off the operator's machine except at Google itself, under the operator's own Google Account.</li>
+    <li><strong>Conversation records</strong> held by the assistant software may contain excerpts of processed content; they are stored locally, are readable only by the operator, and are deleted when the operator deletes them.</li>
   </ul>
 
+  <h2>7. Security</h2>
+  <ul>
+    <li>Authentication uses Google OAuth 2.0 with PKCE; the application never sees or stores the operator's Google password.</li>
+    <li>Tokens are stored with owner-only file permissions on a single computer, and the Google Account is protected by two-step verification.</li>
+    <li>Access can be revoked by the operator at any time and takes effect immediately.</li>
+    <li>No credentials are embedded in this website or in its source. This site is static: it holds no user data and has no database, no cookies, no tracking scripts and no login.</li>
+    <li>No method of storage is perfectly secure; the design choice here is to minimise what exists at all, by keeping the data on one machine under the operator's own control rather than on a server.</li>
+  </ul>
+
+  <h2>8. The operator's rights and controls</h2>
+  <p>Because the operator is the only data subject, these controls are direct and immediate:</p>
+  <ul>
+    <li><strong>Revoke access</strong> at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. The application then loses all ability to read or write the connected Google Account.</li>
+    <li><strong>Delete local data</strong> by removing the token file and the workspace files from the computer.</li>
+    <li><strong>Inspect everything</strong> the application holds, since all of it sits on the operator's own machine.</li>
+    <li><strong>Withdraw consent</strong> for any scope by revoking that scope at the link above, which stops the corresponding capability immediately.</li>
+    <li><strong>Request deletion</strong> by writing to the contact address in section 1; the request is carried out by the operator.</li>
+  </ul>
+
+  <h2>9. International transfers</h2>
+  <p>Data is processed on the operator's own computer in Hong Kong. Where a task requires a Google API or an AI model provider, the transmission is made directly to that provider and is governed by that provider's own terms and data-processing commitments. No transfer is made by the operator to any other jurisdiction or party.</p>
+
+  <h2>10. Children</h2>
+  <p>The application is not directed at, marketed to, or usable by children. It has a single adult user and does not knowingly process any child's data.</p>
+
+  <h2>11. Google API Services User Data Policy</h2>
   <div class="box">
-    <strong>Limited Use disclosure.</strong> Hermes's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.
+    <p><strong>Limited Use disclosure.</strong> Hermes Personal Assistant's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+    <p>Accordingly, the application limits its use of Google user data to providing the features described in section 3; does not transfer Google user data to third parties except as necessary to provide those features, to comply with applicable law, or as part of a merger or acquisition; does not use Google user data for advertising; and does not allow humans to read Google user data except where the operator has given explicit consent for a specific item, where it is necessary for security purposes, to comply with applicable law, or where the data has been aggregated and anonymised.</p>
   </div>
 
-  <h2>5. Retention and deletion</h2>
-  <ul>
-    <li>Tokens persist until the owner revokes them or the application overwrites them during re-authorisation.</li>
-    <li>Local working files and logs may be retained on the owner's machine for operational continuity and can be deleted at any time.</li>
-    <li>The owner can revoke the application's access at any moment at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Revocation takes effect immediately and stops all further access.</li>
-    <li>To request deletion of anything the application has stored, write to the contact address above; the request is handled by the account owner, who is also the only data subject.</li>
-  </ul>
+  <h2>12. Changes to this policy</h2>
+  <p>Any material change is published on this page with a new “Last updated” date and a version number. Because the application has one user, changes are also communicated directly to that user. Continued use after a change constitutes acceptance of the updated policy.</p>
 
-  <h2>6. Security</h2>
-  <p>Access is protected by Google OAuth 2.0 with PKCE. Tokens are held in owner-only file permissions on a single machine, and the account is protected by two-step verification. No credentials are embedded in the application's pages or source.</p>
-
-  <h2>7. Children</h2>
-  <p>The application is not directed at children and is not used by anyone other than its single adult operator.</p>
-
-  <h2>8. Changes</h2>
-  <p>Any material change to this policy is published on this page with a new “Last updated” date. Because the application has one user, changes are also communicated to that user directly.</p>
+  <h2>13. Contact</h2>
+  <p>Privacy questions, access requests, deletion requests, or any concern about this application's handling of data: <a href="mailto:sales@link-point.org">sales@link-point.org</a></p>
 
   <footer>
-    <a href="/">About this application</a> · <span>ballilp-hermes.github.io</span>
+    <a href="/">About this application</a> · <a href="/privacy.html">Privacy Policy</a> · ballilp-hermes.github.io
   </footer>
 </main>
 </body>
